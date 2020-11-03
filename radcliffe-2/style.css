@@ -1512,6 +1512,10 @@ textarea {
 	text-align: center;
 }
 
+.entry-header .entry-title {
+	width: 1040px;
+}
+
 .entry-thumbnail {
 	background-size: cover;
 	background-position: 50% 50%;
@@ -1532,7 +1536,6 @@ textarea {
 	margin: 0 auto;
 	max-width: 92%;
 	word-wrap: break-word;
-	width: 1040px;
 }
 
 .blog .entry-title,
