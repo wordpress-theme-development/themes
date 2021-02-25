@@ -1,0 +1,61 @@
+/*
+Theme Name: Monticello Light 
+Theme URI: 
+Author: Automattic
+Author URI: https://automattic.com/
+Description: A Lightweight version of Monticello
+Requires at least: 5.5
+Tested up to: 5.5
+Requires PHP: 5.6.2
+Template: ponyfill
+Version: 0.1.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: monticello-light
+Tags: will, go, here
+*/
+
+/*
+	Adjustments that couldn't be made with either Global Styles or Polyfill
+*/
+
+
+/*
+	TODO: Discern why fontWeight no longer appears to be working for headers in theme.json
+*/
+
+h1 {
+	font-weight: 300;
+}
+
+h2 {
+	font-weight: 300;
+}
+
+h3 {
+	font-weight: 400;
+}
+
+h4 {
+	font-weight: 300;
+}
+
+h5 {
+	font-weight: 400;
+}
+
+h6 {
+	font-weight: 400;
+} 
+
+/*
+	For some reason Gutenberg cares what the padding is when a background color is set and it's selector wins!
+	Gotta get that fixed somehow.
+	!important is a horrible way to do that....
+*/
+.wp-block-group {
+	padding-top: 100px !important;
+	padding-right: var(--wp--custom--margin--horizontal) !important;
+	padding-bottom: 100px !important;
+	padding-left: var(--wp--custom--margin--horizontal) !important;
+}
