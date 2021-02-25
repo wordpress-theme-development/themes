@@ -32,4 +32,4 @@ function ponyfill_scripts() {
 	// Enqueue the ponyfill from which the Theme derives its name.
 	wp_enqueue_style( 'ponyfill-ponyfill', get_template_directory() . '/assets/ponyfill.css', array(), wp_get_theme()->get( 'Version' )  );
 }
-add_action( 'wp_enqueue_scripts', 'global_styles_scripts', 11 );
+add_action( 'wp_enqueue_scripts', 'ponyfill_scripts', 11 );
