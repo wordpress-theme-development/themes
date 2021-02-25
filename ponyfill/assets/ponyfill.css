@@ -1,19 +1,4 @@
 @charset "UTF-8";
-/*
-Theme Name: Global Styles 
-Theme URI: 
-Author: Automattic
-Author URI: https://automattic.com/
-Description: Global Styles is a lightly-opinionated base theme
-Requires at least: 5.5
-Tested up to: 5.5
-Requires PHP: 5.6.2
-Version: 0.1.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Text Domain: global-styles 
-Tags: will, go, here
-*/
 /**
  * Base
  * - Reset the browser
@@ -32,11 +17,6 @@ body {
 
 main {
 	display: block;
-}
-
-h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
 }
 
 hr {
@@ -369,38 +349,6 @@ body {
  * - See: globals/_global-width-responsive.scss
  */
 /**
- * Top Level Wrappers (header, main, footer)
- * - Set vertical padding and horizontal margins
- */
-.site-header,
-.site-main,
-.site-footer {
-	padding-top: var(--wp--custom--margin--vertical);
-	padding-bottom: var(--wp--custom--margin--vertical);
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.site-header {
-	padding-top: calc(3 * var(--wp--custom--margin--vertical));
-	padding-bottom: calc(3 * var(--wp--custom--margin--vertical));
-}
-
-.has-main-navigation .site-header {
-	padding-top: calc(4 * var(--wp--custom--margin--vertical));
-}
-
-@media only screen and (min-width: 482px) {
-	.site-header {
-		padding-top: calc(3 * var(--wp--custom--margin--vertical));
-		padding-bottom: calc(3 * var(--wp--custom--margin--vertical));
-	}
-	.has-main-navigation .site-header {
-		padding-top: calc(3 * var(--wp--custom--margin--vertical));
-	}
-}
-
-/**
  * Site-main children wrappers
  * - Add double vertical margins here for clearer heirarchy
  */
@@ -606,44 +554,44 @@ body {
  * - Styles for basic HTML elemants
  */
 a {
-	border-bottom: 1px solid var(--wp--preset--color--primary);
+	cursor: pointer;
 	color: var(--wp--style--color--link, var(--wp--preset--color--foreground));
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+}
+
+a:hover, a:focus {
+	border-bottom-color: var(--wp--style--color--link, var(--wp--preset--color--foreground));
+}
+
+.entry-content a {
+	border-bottom: 1px solid var(--wp--style--color--link, var(--wp--preset--color--foreground));
 	text-decoration: none;
 	transition: border-color 0.1s ease-out;
 }
 
-a:hover, a:focus {
+.entry-content a:hover, .entry-content a:focus {
 	border-bottom-color: transparent;
 }
 
-a:hover {
+.entry-content a:hover {
 	color: var(--wp--preset--color--primary);
 }
 
-a:focus {
+.entry-content a:focus {
 	color: var(--wp--preset--color--primary);
 }
 
-a:active {
+.entry-content a:active {
 	color: var(--wp--style--color--link, var(--wp--preset--color--primary));
 }
 
-.has-link-color a {
+.has-link-color .entry-content a {
 	border-bottom: 1px solid var(--wp--style--color--link, var(--wp--preset--color--primary));
 }
 
-.has-link-color a:hover, .has-link-color a:focus {
+.has-link-color .entry-content a:hover, .has-link-color .entry-content a:focus {
 	border-bottom-color: transparent;
-}
-
-.has-background:not(.has-background-background-color) .has-link-color a,
-.has-background:not(.has-background-background-color).has-link-color a {
-	color: var(--wp--style--color--link, var(--wp--preset--color--primary));
-}
-
-button,
-a {
-	cursor: pointer;
 }
 
 input[type="text"],
