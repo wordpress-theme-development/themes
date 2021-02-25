@@ -1,6 +1,6 @@
 <?php
-if ( ! function_exists( 'global-styles_support' ) ) :
-	function global_styles_support()  {
+if ( ! function_exists( 'ponyfill_support' ) ) :
+	function ponyfill_support()  {
 
 		// Alignwide and alignfull classes in the block editor.
 		add_theme_support( 'align-wide' );
@@ -21,15 +21,15 @@ if ( ! function_exists( 'global-styles_support' ) ) :
 			'style.css'
 		) );
     }
-    add_action( 'after_setup_theme', 'global_styles_support' );
+    add_action( 'after_setup_theme', 'ponyfill_support' );
 endif;
 
 /**
  * 
  * Enqueue scripts and styles.
  */
-function global_styles_scripts() {
-	// Enqueue front-end styles.
-	wp_enqueue_style( 'global-styles-styles', get_stylesheet_uri() );
+function ponyfill_scripts() {
+	// Enqueue the ponyfill from which the Theme derives its name.
+	wp_enqueue_style( 'ponyfill-ponyfill', get_template_directory() . '/assets/ponyfill.css', array(), wp_get_theme()->get( 'Version' )  );
 }
 add_action( 'wp_enqueue_scripts', 'global_styles_scripts', 11 );
