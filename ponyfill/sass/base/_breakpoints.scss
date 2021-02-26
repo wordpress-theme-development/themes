@@ -1,76 +1,50 @@
 // Responsive breakpoints mixin
-
+// Because Media Queries aren't able to use CSS Variables those breakpoints need to be defined upon SCSS compilation.
+// Unfortunately that introduces unalterable opinion as to where those breakpoints should be.
 /**
  * Required Variables
  */
- $default_width: 620px;
- $alignwide_width: 790px;
- $breakpoint_sm: 482px;
- $breakpoint_md: 592px;
- $breakpoint_lg: 652px;
- $breakpoint_xl: 822px;
- $breakpoint_xxl: 1024px;
+ $breakpoint_mobile: 482px;
+ $breakpoint_laptop: 1020px;
+ $breakpoint_desktop: 1290px;
 
  // Responsive breakpoints mixin
  @mixin media( $res ) {
 
 	 @if mobile-only == $res {
-		 @media only screen and (max-width: #{$breakpoint_sm - 1}) {
+		 @media only screen and (max-width: #{$breakpoint_mobile - 1}) {
 			 @content;
 		 }
 	 }
 
 	 @if mobile == $res {
-		 @media only screen and (min-width: #{$breakpoint_sm}) {
-			 @content;
-		 }
-	 }
-
-	 @if tablet-only == $res {
-		 @media only screen and (max-width: #{$breakpoint_md - 1}) {
-			 @content;
-		 }
-	 }
-
-	 @if tablet == $res {
-		 @media only screen and (min-width: #{$breakpoint_md}) {
+		 @media only screen and (min-width: #{$breakpoint_mobile}) {
 			 @content;
 		 }
 	 }
 
 	 @if laptop-only == $res {
-		 @media only screen and (max-width: #{$breakpoint_lg - 1}) {
+		 @media only screen and (max-width: #{$breakpoint_laptop - 1}) {
 			 @content;
 		 }
 	 }
 
 	 @if laptop == $res {
-		 @media only screen and (min-width: #{$breakpoint_lg}) {
+		 @media only screen and (min-width: #{$breakpoint_laptop}) {
 			 @content;
 		 }
 	 }
 
 	 @if desktop-only == $res {
-		 @media only screen and (max-width: #{$breakpoint_xl - 1}) {
+		 @media only screen and (max-width: #{$breakpoint_desktop - 1}) {
 			 @content;
 		 }
 	 }
 
 	 @if desktop == $res {
-		 @media only screen and (min-width: #{$breakpoint_xl}) {
+		 @media only screen and (min-width: #{$breakpoint_desktop}) {
 			 @content;
 		 }
 	 }
 
-	 @if wide-only == $res {
-		 @media only screen and (max-width: #{$breakpoint_xxl - 1}) {
-			 @content;
-		 }
-	 }
-
-	 @if wide == $res {
-		 @media only screen and (min-width: #{$breakpoint_xxl}) {
-			 @content;
-		 }
-	 }
  }

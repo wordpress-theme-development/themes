@@ -14,8 +14,6 @@ if ( ! function_exists( 'ponyfill_support' ) ) :
 		// Add support for editor styles.
 		add_theme_support( 'editor-styles' );
 
-		add_theme_support( 'wp-block-styles' );
-
 		// Enqueue editor styles.
 		add_editor_style( array( 
 			'/assets/ponyfill.css'

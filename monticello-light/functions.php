@@ -40,6 +40,6 @@ function monticello_light_fonts_url() {
  */
 function monticello_light_scripts() {
 	wp_enqueue_style( 'monticello-light-fonts', monticello_light_fonts_url(), array(), null );
-	wp_enqueue_style( 'monticello-light-style', get_stylesheet_uri(), array('ponyfill-ponyfill'), wp_get_theme()->get( 'Version' )  );
+	wp_enqueue_style( 'monticello-light-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' )  );
 }
 add_action( 'wp_enqueue_scripts', 'monticello_light_scripts', 11 );

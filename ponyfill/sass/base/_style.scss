@@ -4,9 +4,26 @@
  */
 
 @import "normalize";
-@import "reset";
+
 @import "breakpoints";
 @import "accessibility";
-@import "text-selection";
-@import "vertical-margins";
-@import "responsive-logic";
+
+@import "alignment";
+
+//Colors
+
+// If it's a paragraph block start out with it being the foreground color. Full stop.
+// .wp-site-blocks {
+// 	p:not(.has-text-color) {
+// 		color: var(--wp--preset--color--foreground);
+// 	}
+// }
+
+// Gutenberg applies a white color to things that are inside of elements that have a background color.
+// White might not be what we're interested in so we'll use the background color instead
+*[class*="-background-color"]:not(.has-text-color) {
+	color: var(--wp--preset--color--background);
+	a {
+		color: var(--wp--preset--color--background);
+	}
+}

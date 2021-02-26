@@ -8,13 +8,13 @@ a {
 
 	&:hover,
 	&:focus {
-		border-bottom-color: var( --wp--style--color--link, var(--wp--preset--color--foreground) );
+		border-bottom-color: currentColor;
 	}
 }
 
 // Links that are in the content
 .entry-content a {
-	border-bottom: 1px solid var( --wp--style--color--link, var(--wp--preset--color--foreground) );
+	border-bottom: 1px solid currentColor;
 	text-decoration: none;
 	transition: border-color 0.1s ease-out;
 
@@ -23,26 +23,8 @@ a {
 		border-bottom-color: transparent;
 	}
 
-	&:hover {
-		color: var(--wp--preset--color--primary);
-	}
-
-	&:focus {
-		color: var(--wp--preset--color--primary);
-	}
-
 	&:active {
 		color: var( --wp--style--color--link, var(--wp--preset--color--primary) );
 	}
 
-	// If a custom link color has been assigned,
-	// switch the color of the bottom border too.
-	.has-link-color & {
-		border-bottom: 1px solid var( --wp--style--color--link, var(--wp--preset--color--primary) );
-
-		&:hover,
-		&:focus {
-			border-bottom-color: transparent;
-		}
-	}
 }

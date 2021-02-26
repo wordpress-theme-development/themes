@@ -100,8 +100,8 @@
 					"vertical": "20px"
 				},
 				"width": {
-					"mobile": "350px",
-					"default": "1020px"
+					"default": "750px",
+					"wide": "1200px"
 				},
 				"button": {
 					"font-weight": "normal",
@@ -152,8 +152,8 @@
 		"core/group": {
 			"spacing": {
 				"padding": {
-					"top": "100px",
-					"bottom": "100px",
+					"top": "var(--wp--custom--margin--vertical)",
+					"bottom": "var(--wp--custom--margin--vertical)",
 					"left": "var(--wp--custom--margin--horizontal)",
 					"right": "var(--wp--custom--margin--horizontal)"
 				}
@@ -161,7 +161,7 @@
 		},
 		"core/heading/h1": {
 			"typography": {
-				"fontSize": "88px",
+				"fontSize": "80px",
 				"fontWeight": "300",
 				"lineHeight": "var(--wp--custom--line-height--headings)"
 			}
