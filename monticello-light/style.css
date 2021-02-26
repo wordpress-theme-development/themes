@@ -16,7 +16,8 @@ Tags: will, go, here
 */
 
 /*
-	Adjustments that couldn't be made with either Global Styles or Polyfill
+	Adjustments that couldn't be made with either Global Styles or Polyfill.
+	Everything here will eventually find another home.
 */
 
 
@@ -57,6 +58,10 @@ h6 {
 	margin-bottom: unset;
 }
 
-.wp-block-media-text .wp-block-media-text__content {
-	padding: unset;
+/*
+   Hrm.  More opinion about padding and such in Gutenberg.  It kinda wrecks the design I'm building
+   but other designs probably depend on that being there.  Moar Gutenberg opinion!
+*/
+.wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
+	padding-left: unset;
 }
