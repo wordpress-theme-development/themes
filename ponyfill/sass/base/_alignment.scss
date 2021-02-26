@@ -13,7 +13,8 @@ body {
 
 // This puts some space between all the elements in the content and in any containers (such as group of column)
 .entry-content > *:not(:last-child):not(.wp-block-spacer),
-*[class*="__inner-container"] > *:not(:last-child):not(.wp-block-spacer){
+*[class*="__inner-container"] > *:not(:last-child):not(.wp-block-spacer),
+*[class*="__content"] > *:not(:last-child):not(.wp-block-spacer){
 	margin-bottom: var(--wp--custom--margin--vertical);
 }
 
@@ -41,8 +42,8 @@ body {
 // The block or template part should span the full width of the page
 .wp-site-blocks .alignfull {
 	transform: translateX(calc(0px - var(--wp--custom--margin--horizontal)));
-	width: 100vw;
-	max-width: 100%;
+	width: calc(100% + (2 * var(--wp--custom--margin--horizontal)));
+	max-width: calc(100% + (2 * var(--wp--custom--margin--horizontal)));
 	margin-left: 0;
 	margin-right: 0;
 	box-sizing: content-box;

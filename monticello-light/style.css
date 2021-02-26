@@ -48,36 +48,15 @@ h6 {
 	font-weight: 400;
 } 
 
-/*
-	For some reason Gutenberg cares what the padding is when a background color is set and it's selector wins rather than the selector created via Global Styles.
-	Gotta get that fixed somehow.
-*/
-.wp-block-group.has-background {
-	padding-top: var(--wp--custom--margin--vertical);
-	padding-bottom: var(--wp--custom--margin--vertical);
-	padding-right: var(--wp--custom--margin--horizontal);
-	padding-left: var(--wp--custom--margin--horizontal);
-}
+
 
 /*
-	Why does Gutenberg care about the padding under a column?
-	That's dumb.  TODO: Open up an issue to be rid of that?
+	Why does Gutenberg care about the margin under a column?
 */
 .wp-block-columns {
 	margin-bottom: unset;
 }
 
-/*
-	Fighting Gutenberg again which seems to think that it should have an opinion as to the padding in a media-text block.
-	It seems to me that it should not...
-*/
 .wp-block-media-text .wp-block-media-text__content {
 	padding: unset;
-}
-
-/*
-	Again I don't understand why default Gutenberg styles would introduce a margin here.  Seems pretty opinionated...
-*/
-.wp-block-column:not(:first-child) {
-	/* margin-left: unset; */
 }

@@ -149,16 +149,7 @@
 				"fontWeight": "400"
 			}
 		},
-		"core/group": {
-			"spacing": {
-				"padding": {
-					"top": "var(--wp--custom--margin--vertical)",
-					"bottom": "var(--wp--custom--margin--vertical)",
-					"left": "var(--wp--custom--margin--horizontal)",
-					"right": "var(--wp--custom--margin--horizontal)"
-				}
-			}
-		},
+
 		"core/heading/h1": {
 			"typography": {
 				"fontSize": "80px",
