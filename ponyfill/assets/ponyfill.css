@@ -397,6 +397,51 @@ p.has-text-color a {
 	color: var(--wp--style--color--link, var(--wp--preset--color--primary));
 }
 
+.wp-block-navigation a {
+	border-bottom: none;
+}
+
+.wp-block-navigation .wp-block-navigation-link {
+	padding: 0;
+}
+
+.wp-block-navigation .wp-block-navigation-link .wp-block-navigation-link__content {
+	padding: var(--wp--custom--navigation--padding);
+}
+
+.wp-block-navigation .wp-block-navigation-link__submenu-icon {
+	padding: 0;
+}
+
+.wp-block-navigation .wp-block-navigation__container .wp-block-navigation-link {
+	color: var(--wp--custom--navigation--color--text);
+	background-color: var(--wp--custom--navigation--color--background);
+}
+
+.wp-block-navigation .wp-block-navigation__container .wp-block-navigation-link :hover {
+	color: var(--wp--custom--navigation--color--hover-text);
+	background-color: var(--wp--custom--navigation--color--hover-background);
+}
+
+.wp-block-navigation .wp-block-navigation__container .has-child .wp-block-navigation-link__container {
+	padding: 0;
+	border-radius: var(--wp--custom--navigation--submenu--border--radius);
+	border-style: var(--wp--custom--navigation--submenu--border--style);
+	border-width: var(--wp--custom--navigation--submenu--border--width);
+	border-color: var(--wp--custom--navigation--submenu--border--color);
+	color: var(--wp--custom--navigation--submenu--color--text);
+	background-color: var(--wp--custom--navigation--submenu--color--background);
+}
+
+.wp-block-navigation .wp-block-navigation__container .has-child .wp-block-navigation-link__container :hover {
+	color: var(--wp--custom--navigation--submenu--color--hover-text);
+	background-color: var(--wp--custom--navigation--submenu--color--hover-background);
+}
+
+.wp-block-navigation .wp-block-navigation__container .has-child .wp-block-navigation-link__container .wp-block-navigation-link__content {
+	padding: var(--wp--custom--navigation--submenu--padding);
+}
+
 /*
  * Components
  * - Similar to Blocks but exist outside of the "current" editor context
