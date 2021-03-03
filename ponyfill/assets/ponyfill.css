@@ -280,9 +280,12 @@ object {
 /**
  * Button
  */
-button,
-.button,
-input[type="submit"] {
+/*
+	Extend button to match.
+*/
+.wp-site-blocks button,
+.wp-site-blocks .button,
+.wp-site-blocks input[type="submit"] {
 	cursor: pointer;
 	border-width: 0;
 	text-decoration: none;
@@ -296,20 +299,20 @@ input[type="submit"] {
 	padding: var(--wp--custom--button--padding);
 }
 
-button:not(.has-background):active,
-.button:not(.has-background):active,
-input[type="submit"]:not(.has-background):active {
+.wp-site-blocks button:not(.has-background):active,
+.wp-site-blocks .button:not(.has-background):active,
+.wp-site-blocks input[type="submit"]:not(.has-background):active {
 	color: var(--wp--custom--button--color--hover-text);
 	background-color: var(--wp--custom--button--color--hover-background);
 }
 
-button:not(.has-background):hover, button:not(.has-background):focus, button:not(.has-background).has-focus,
-.button:not(.has-background):hover,
-.button:not(.has-background):focus,
-.button:not(.has-background).has-focus,
-input[type="submit"]:not(.has-background):hover,
-input[type="submit"]:not(.has-background):focus,
-input[type="submit"]:not(.has-background).has-focus {
+.wp-site-blocks button:not(.has-background):hover, .wp-site-blocks button:not(.has-background):focus, .wp-site-blocks button:not(.has-background).has-focus,
+.wp-site-blocks .button:not(.has-background):hover,
+.wp-site-blocks .button:not(.has-background):focus,
+.wp-site-blocks .button:not(.has-background).has-focus,
+.wp-site-blocks input[type="submit"]:not(.has-background):hover,
+.wp-site-blocks input[type="submit"]:not(.has-background):focus,
+.wp-site-blocks input[type="submit"]:not(.has-background).has-focus {
 	color: var(--wp--custom--button--color--hover-text);
 	background-color: var(--wp--custom--button--color--hover-background);
 }

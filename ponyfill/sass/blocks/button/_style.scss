@@ -1,0 +1,108 @@
+/**
+ * Button
+ */
+
+@mixin button-main-styles {
+
+	cursor: pointer;
+	border-width: 0;
+	text-decoration: none;
+
+	color: var(--wp--custom--button--color--text);
+	background-color: var(--wp--custom--button--color--background);
+	font-weight: var(--wp--custom--button--font-weight);
+	font-family: var(--wp--custom--button--font-family);
+	font-size: var(--wp--custom--button--font-size);
+	line-height: var(--wp--custom--button--line-height);
+	border-radius: var(--wp--custom--button--border-radius);
+	padding: var(--wp--custom--button--padding);
+
+}
+
+@mixin button-hover-styles {
+	&:not(.has-background) {
+		&:active {
+			color: var(--wp--custom--button--color--hover-text);
+			background-color: var(--wp--custom--button--color--hover-background);
+		}
+		&:hover,
+		&:focus,
+		&.has-focus {
+			color: var(--wp--custom--button--color--hover-text);
+			background-color: var(--wp--custom--button--color--hover-background);
+		}
+	}
+}
+
+
+/*
+	Extend button to match.
+*/
+.wp-site-blocks {
+	button,
+	.button,
+	input[type="submit"] {
+		// Extend button style
+		@include button-hover-styles;
+		@include button-main-styles;
+	}
+}
+
+/**
+ * Block Options
+ */
+.wp-block-button {
+
+	font-weight: var(--wp--custom--button--font-weight);
+	font-family: var(--wp--custom--button--font-family);
+	font-size: var(--wp--custom--button--font-size);
+	line-height: var(--wp--custom--button--line-height);
+
+	&:not(.is-style-outline) .wp-block-button__link {
+		@include button-hover-styles;
+	}
+
+	&.wp-block-button__link,
+	.wp-block-button__link {
+		@include button-main-styles;
+	}
+
+	// Outline Style
+	&.is-style-outline {
+		border: none;
+
+		&.wp-block-button__link,
+		.wp-block-button__link {
+
+			border: var(--wp--custom--button--border-width) solid currentcolor;
+			padding: var(--wp--custom--button--padding);
+
+			&:not(.has-background) {
+				background: transparent;
+			}
+
+			&:not(.has-text-color) {
+				color: var(--wp--custom--button--color--background);
+			}
+
+			&:not(.has-text-color),
+			&.has-secondary-color{
+
+				&:active {
+					color: var(--wp--custom--button--color--background);
+				}
+
+				&:hover,
+				&:focus,
+				&.has-focus {
+					color: var(--wp--custom--button--color--hover--background);
+				}
+			}
+		}
+	}
+
+	// Squared Style
+	&.is-style-squared .wp-block-button__link {
+		border-radius: 0;
+	}
+}
