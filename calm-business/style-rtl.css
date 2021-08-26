@@ -3166,15 +3166,15 @@ body.page .main-navigation {
 }
 
 @media only screen and (min-width: 768px) {
-  .comment-form :not(.comment-form-fields) .comment-form-author,
-  .comment-form :not(.comment-form-fields) .comment-form-email {
+  .comment-form .comment-form-author:not(.comment-form-field),
+  .comment-form .comment-form-email:not(.comment-form-field) {
     width: calc(50% - 0.5rem);
     float: right;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .comment-form :not(.comment-form-fields) .comment-form-email {
+  .comment-form .comment-form-email:not(.comment-form-field) {
     margin-right: 1rem;
   }
 }
